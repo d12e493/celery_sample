@@ -1,13 +1,19 @@
-## Initial
+## Initial Setting
+### Redis
+```
+sh redis/run.sh
+```
+
+### Python
 ```
 pipenv install
 pipenv shell
 ```
-## Client
+## Run Client
 ```
 python client.py -c ${count}
 ```
-## Worker
+## Run Worker
 ```
 celery -A task worker -Q ${queue_name} -l ${log_level} -c ${concurrency} -n ${worker_name} --prefetch-multiplier=1
 
